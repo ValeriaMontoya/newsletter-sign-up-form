@@ -69,10 +69,6 @@ button {
   color: hsl(0, 0%, 100%);
 }
 
-button:focus {
-  outline: 3px solid hsl(4, 100%, 67%);
-}
-
 .sign-up,
 .success.visible {
   background-color: hsl(0, 0%, 100%);

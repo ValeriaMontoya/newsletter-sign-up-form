@@ -76,10 +76,6 @@ button {
   color: $white;
 }
 
-button:focus {
-  outline: 3px solid $tomato;
-}
-
 .sign-up,
 .success.visible {
   background-color: $white;

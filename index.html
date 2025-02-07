@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="This is a solution to the Newsletter sign-up form with success message challenge on Frontend Mentor.">
+  <meta name="keywords" content="Frontend Mentor, HTML, CSS, JS">
+  <meta name="author" content="Valeria Montoya">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/main.css">
+  <script defer src="./script.js"></script>
+
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+</head>
+
+<body>
+  <main>
+    <!-- Sign-up form -->
+    <section class="sign-up" id="sign-up">
+      <picture>
+        <source media="(min-width: 1024px)" srcset="./assets/images/illustration-sign-up-desktop.svg">
+        <img src="./assets/images/illustration-sign-up-mobile.svg" alt="Illustration of an email being received">
+      </picture>
+      <div class="sign-up__info">
+        <h1 class="sign-up__title">Stay updated!</h1>
+        <p class="sign-up__description">Join 60,000+ product managers receiving monthly updates on:</p>
+        <ul>
+          <li>Product discovery and building what matters</li>
+          <li>Measuring to ensure updates are a success</li>
+          <li>And much more!</li>
+        </ul>
+        <form novalidate class="sign-up__form">
+          <div class="sign-up__container">
+            <label for="email" class="sign-up__label">
+              Email address
+            </label>
+            <span aria-live="polite" class="sign-up__error-message"></span>
+          </div>
+          <input type="email" name="email" id="email" placeholder="email@company.com" autocomplete="email" required class="sign-up__input">
+          <button class="sign-up__button">Subscribe to monthly newsletter</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Success message -->
+    <section class="success" id="success" role="alert">
+      <img class="success__icon" src="./assets/images/icon-success.svg" alt="Success icon, checkmark symbol indicating successful subscription">
+      <h2 class="success__title">Thanks for subscribing!</h2>
+      <p class="success__description">
+        A confirmation email has been sent to <span class="success__email"></span>.
+        Please open it and click the button inside to confirm your subscription.
+      </p>
+      <button class="success__button" aria-label="Dismiss message">Dismiss message</button>
+    </section>
+  </main>
+</body>
+
+</html>

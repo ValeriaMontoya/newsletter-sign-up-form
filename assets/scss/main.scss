@@ -1,0 +1,194 @@
+@import url("https://api.fonts.coollabs.io/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+$tomato: hsl(4, 100%, 67%);
+$dark-slate-grey: hsl(234, 29%, 20%);
+$charcoal-grey: hsl(235, 18%, 26%);
+$grey: hsl(231, 7%, 60%);
+$white: hsl(0, 0%, 100%);
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: $charcoal-grey;
+  font-family: "Roboto", serif;
+  color: $dark-slate-grey;
+  line-height: 150%;
+}
+
+h1,
+h2 {
+  line-height: 100%;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  margin-block-end: 30px;
+}
+
+li {
+  display: flex;
+  gap: 16px;
+  margin-block-end: 10px;
+}
+
+li::before {
+  content: url(../assets/images/icon-list.svg);
+}
+
+input,
+button {
+  font-family: inherit;
+  font-size: inherit;
+  border-radius: 8px;
+  width: 100%;
+}
+
+input {
+  border: 1px solid $grey;
+  padding: 16px 24px;
+  margin-block-start: 8px;
+  margin-block-end: 24px;
+  color: $dark-slate-grey;
+}
+
+input:focus {
+  outline: 1px solid $dark-slate-grey;
+}
+
+button {
+  border: none;
+  padding: 18px 46px;
+  background-color: $dark-slate-grey;
+  color: $white;
+}
+
+button:focus {
+  outline: 3px solid $tomato;
+}
+
+.sign-up,
+.success.visible {
+  background-color: $white;
+}
+
+button,
+.sign-up__label,
+.sign-up__error-message,
+.success__description span {
+  font-weight: 700;
+}
+
+.sign-up {
+  max-width: 375px;
+  &__info {
+    padding: 40px 24px;
+  }
+  &__title {
+    font-size: 2.5rem;
+  }
+  &__description {
+    margin-block: 24px;
+  }
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__label {
+    font-size: 0.75rem;
+  }
+  &__error-message {
+    color: $tomato;
+    font-size: 0.75rem;
+  }
+  &__input.error {
+    background-color: rgba(255, 97, 85, 0.15);
+    color: $tomato;
+    border: 1px solid $tomato;
+  }
+  &.hidden {
+    display: none;
+  }
+}
+
+.success {
+  display: none;
+  &__icon {
+    margin-block-end: 40px;
+  }
+  &__title {
+    font-size: 2.5rem;
+    margin-block-end: 24px;
+  }
+  &__description {
+    margin-block-end: 50px;
+  }
+  &.visible {
+    display: block;
+    max-width: 375px;
+    min-height: 100vh;
+    padding: 40px 24px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .sign-up {
+    max-width: 900px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    border-radius: 36px;
+    box-shadow: 0px 15px 60px 0px rgba(0, 0, 0, 0.25);
+    picture {
+      padding: 24px 24px 24px 0;
+      flex-shrink: 0;
+    }
+    &__info {
+      padding: 100px 60px;
+    }
+    &__title {
+      font-size: 3.5rem;
+    }
+  }
+
+  .success {
+    &__title {
+      font-size: 3.5rem;
+    }
+    &__description {
+      margin-block-end: 40px;
+    }
+    &.visible {
+      max-width: 500px;
+      min-height: 0;
+      padding: 48px 64px 64px;
+      border-radius: 36px;
+      box-shadow: 0px 15px 60px 0px rgba(0, 0, 0, 0.25);
+    }
+  }
+}
+
+@media (hover: hover) {
+  input:hover,
+  button:hover {
+    cursor: pointer;
+  }
+  button:hover {
+    border-radius: 8px;
+    background: linear-gradient(204deg, #ff6a3a 0%, #ff527b 100%);
+    box-shadow: 0px 16px 32px 0px rgba(255, 97, 85, 0.5);
+  }
+}

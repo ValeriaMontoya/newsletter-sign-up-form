@@ -1,0 +1,183 @@
+@import url("https://api.fonts.coollabs.io/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: hsl(235, 18%, 26%);
+  font-family: "Roboto", serif;
+  color: hsl(234, 29%, 20%);
+  line-height: 150%;
+}
+
+h1,
+h2 {
+  line-height: 100%;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  margin-block-end: 30px;
+}
+
+li {
+  display: flex;
+  gap: 16px;
+  margin-block-end: 10px;
+}
+
+li::before {
+  content: url(../assets/images/icon-list.svg);
+}
+
+input,
+button {
+  font-family: inherit;
+  font-size: inherit;
+  border-radius: 8px;
+  width: 100%;
+}
+
+input {
+  border: 1px solid hsl(231, 7%, 60%);
+  padding: 16px 24px;
+  margin-block-start: 8px;
+  margin-block-end: 24px;
+  color: hsl(234, 29%, 20%);
+}
+
+input:focus {
+  outline: 1px solid hsl(234, 29%, 20%);
+}
+
+button {
+  border: none;
+  padding: 18px 46px;
+  background-color: hsl(234, 29%, 20%);
+  color: hsl(0, 0%, 100%);
+}
+
+button:focus {
+  outline: 3px solid hsl(4, 100%, 67%);
+}
+
+.sign-up,
+.success.visible {
+  background-color: hsl(0, 0%, 100%);
+}
+
+button,
+.sign-up__label,
+.sign-up__error-message,
+.success__description span {
+  font-weight: 700;
+}
+
+.sign-up {
+  max-width: 375px;
+}
+.sign-up__info {
+  padding: 40px 24px;
+}
+.sign-up__title {
+  font-size: 2.5rem;
+}
+.sign-up__description {
+  margin-block: 24px;
+}
+.sign-up__container {
+  display: flex;
+  justify-content: space-between;
+}
+.sign-up__label {
+  font-size: 0.75rem;
+}
+.sign-up__error-message {
+  color: hsl(4, 100%, 67%);
+  font-size: 0.75rem;
+}
+.sign-up__input.error {
+  background-color: rgba(255, 97, 85, 0.15);
+  color: hsl(4, 100%, 67%);
+  border: 1px solid hsl(4, 100%, 67%);
+}
+.sign-up.hidden {
+  display: none;
+}
+
+.success {
+  display: none;
+}
+.success__icon {
+  margin-block-end: 40px;
+}
+.success__title {
+  font-size: 2.5rem;
+  margin-block-end: 24px;
+}
+.success__description {
+  margin-block-end: 50px;
+}
+.success.visible {
+  display: block;
+  max-width: 375px;
+  min-height: 100vh;
+  padding: 40px 24px;
+}
+
+@media screen and (min-width: 1024px) {
+  .sign-up {
+    max-width: 900px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    border-radius: 36px;
+    box-shadow: 0px 15px 60px 0px rgba(0, 0, 0, 0.25);
+  }
+  .sign-up picture {
+    padding: 24px 24px 24px 0;
+    flex-shrink: 0;
+  }
+  .sign-up__info {
+    padding: 100px 60px;
+  }
+  .sign-up__title {
+    font-size: 3.5rem;
+  }
+  .success__title {
+    font-size: 3.5rem;
+  }
+  .success__description {
+    margin-block-end: 40px;
+  }
+  .success.visible {
+    max-width: 500px;
+    min-height: 0;
+    padding: 48px 64px 64px;
+    border-radius: 36px;
+    box-shadow: 0px 15px 60px 0px rgba(0, 0, 0, 0.25);
+  }
+}
+@media (hover: hover) {
+  input:hover,
+  button:hover {
+    cursor: pointer;
+  }
+  button:hover {
+    border-radius: 8px;
+    background: linear-gradient(204deg, #ff6a3a 0%, #ff527b 100%);
+    box-shadow: 0px 16px 32px 0px rgba(255, 97, 85, 0.5);
+  }
+}/*# sourceMappingURL=main.css.map */

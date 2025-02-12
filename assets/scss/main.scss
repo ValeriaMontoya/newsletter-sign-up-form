@@ -65,7 +65,7 @@ input {
   color: $dark-slate-grey;
 }
 
-input:focus {
+input:focus-visible {
   outline: 1px solid $dark-slate-grey;
 }
 
@@ -74,6 +74,10 @@ button {
   padding: 18px 46px;
   background-color: $dark-slate-grey;
   color: $white;
+}
+
+button:focus-visible {
+  outline: 4px solid $grey;
 }
 
 .sign-up,

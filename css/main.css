@@ -58,7 +58,7 @@ input {
   color: hsl(234, 29%, 20%);
 }
 
-input:focus {
+input:focus-visible {
   outline: 1px solid hsl(234, 29%, 20%);
 }
 
@@ -67,6 +67,10 @@ button {
   padding: 18px 46px;
   background-color: hsl(234, 29%, 20%);
   color: hsl(0, 0%, 100%);
+}
+
+button:focus-visible {
+  outline: 4px solid hsl(231, 7%, 60%);
 }
 
 .sign-up,
